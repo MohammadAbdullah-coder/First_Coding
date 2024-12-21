@@ -22,18 +22,19 @@ class BankAmount:
         self.balance += amount
 
 def transaction_amount(acc_1,acc_2,amount):
-    # try:
+    try:
         acc_1.withdraw_amount(amount)
         acc_2.deposit(amount)
-        # return
-    # except:
+        return True
+    except:
 
-        # print(False)
+        print(False)
 
 User_1 = BankAmount('00001')
 User_2 = BankAmount('00002')
 User_1.deposit(amount)
 User_2.deposit(amount_1)
+
 print('User_1 Bank Balance: {}'.format(User_1.get_balance_details()))
 print('User_2 Bank Balance: {}'.format(User_2.get_balance_details()))
 
